@@ -74,7 +74,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     greeting_message = f"""مرحباً بك يا {user.mention_html()}! أنا بوت مساعد لشركة تصميم الباترونات والخدمات الفنية.
 يمكنني مساعدتك في التعرف على خدماتنا والإجابة على أسئلتك.
 خدماتنا تشمل:
-{os.linesep.join([f’\- {service}’ for service in SERVICES])}
+{os.linesep.join([f'- {service}' for service in SERVICES])}
 
 كيف يمكنني مساعدتك اليوم؟ يمكنك طرح سؤال أو استخدام الأوامر التالية:
 /services - لعرض الخدمات المتاحة
@@ -108,7 +108,7 @@ async def show_services(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     client_message = "/services"
 
     services_text = f"""يسعدنا أن نقدم لك الخدمات التالية:
-{os.linesep.join([f’\- {service}’ for service in SERVICES])}
+{os.linesep.join([f'- {service}' for service in SERVICES])}
 
 إذا كان لديك أي استفسار حول أي خدمة، فلا تتردد في السؤال!"""
     await update.message.reply_text(services_text)
